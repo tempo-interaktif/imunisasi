@@ -1,0 +1,83 @@
+div.tooltip {color: #fff;background-color: rgb(0,0,0,0.7);padding: .5em;border-radius: 2px;position: absolute;border: 1px solid black;max-width:225px;visibility:hidden;font-size:12px}
+.tooltip p{margin:5px auto;font-weight:300;margin-left:5pt}
+.tooltip div{margin-bottom:5pt}
+
+.legends{padding: 0;list-style: none;margin: 5px auto;font-family: 'Montserrat',sans-serif;line-height: normal;}
+.legends li {font-size: 10px;line-height: normal;margin: 5px auto;display: inline-block;margin-right: 10px;}
+.legends li object{margin-right: 2px;border: 1px solid rgb(0,0,0,0.2);width: 8px;height: 8px;}
+
+.map-container{
+    font-family: 'Montserrat',sans-serif;
+    line-height: normal;
+}
+h4.title-point{text-transform: uppercase;font-family: 'Montserrat',sans-serif;line-height: normal;}
+p.desc-point{margin: 0;font-size: 12px;font-family: 'Montserrat',sans-serif;line-height: normal;}
+#map-world{
+    position: relative;
+    cursor: move;
+    background-color: #fff;
+}
+.negara{
+    cursor: pointer;
+}
+.textCountry{
+    fill: #000;
+}
+.leaflet-control-container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+.leaflet-top-leaflet-left{
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.leaflet-control-zoom{
+    display: grid;
+}
+.leaflet-control-zoom a{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+}
+.leaflet-control-zoom a:hover{
+    background-color: #f4f4f4;
+}
+.leaflet-control-zoom a:first-child{
+    border-bottom: 1px solid #ccc;
+}
+table{border-collapse:separate;line-height: normal;font-family: 'Montserrat',sans-serif;font-size: 12px;white-space: normal;}
+
+thead{background-color: #102631;color: #fff;}
+thead tr th{padding: 10px;}
+thead tr th.vaccine{background-color: #102631;}
+thead tr th.sub-title{background-color: #d5d6d8;color: #000;}
+
+tbody{background-color: #d5d6d8;color: #000;font-weight: 400;}
+tbody tr td{padding: 5pt 2pt;text-align: center;}
+tbody tr td.vaccine-imun{font-weight: 800;text-align: left;background-color: #d5d6d8;white-space: nowrap;}
+tbody tr td.doses{background-color:#fed105}
+tbody tr td.notes{background-color:#74ad99}
+tbody tr td.risk{background-color:#b896c6}
+tbody tr td.align-left{text-align: center;}
+@media (max-width: 1200px){
+    .container{position: relative;}
+    .table-container{margin-left: 128px;overflow-x: scroll;box-sizing: border-box;padding-bottom: 2px;}
+    .table-container::-webkit-scrollbar {width:10px; background:rgba(85,143,167,0.1);}
+    .table-container::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);}
+    .table-container::-webkit-scrollbar-thumb {background-color:#102631;}
+    .table-container::-webkit-scrollbar:horizontal {height:10px;}
+    .table-container::-webkit-scrollbar:vertical {width:10px;}
+    thead tr th, tbody tr td{white-space: nowrap;}
+    thead tr th.vaccine{width: 110px;position: absolute;left: 0;top: auto;border-left: 2px solid #fff;border-right: 2px solid #fff;}
+    tbody tr td.vaccine-imun{width: 125px;position: absolute;left: 0;top: auto;border-left: 2px solid #fff;border-right: 2px solid #fff;}
+}
