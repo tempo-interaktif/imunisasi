@@ -11,7 +11,7 @@ div.tooltip {color: #fff;background-color: rgb(0,0,0,0.7);padding: .5em;border-r
     line-height: normal;
 }
 h4.title-point{text-transform: uppercase;font-family: 'Montserrat',sans-serif;line-height: normal;}
-p.desc-point{margin: 0;font-size: 12px;font-family: 'Montserrat',sans-serif;line-height: normal;}
+p.desc-point{margin: 0px auto;font-size: 12px;font-family: 'Montserrat',sans-serif;line-height: normal;}
 #map-world{
     position: relative;
     cursor: move;
@@ -55,6 +55,33 @@ p.desc-point{margin: 0;font-size: 12px;font-family: 'Montserrat',sans-serif;line
 .leaflet-control-zoom a:first-child{
     border-bottom: 1px solid #ccc;
 }
+.btn-group{
+    display: flex;
+}
+.btn-vaccine{
+    display: block;
+    margin: 10px 10px 10px 0;
+    padding: 4px 16px;
+    background-color: #cccccc;
+    box-sizing: border-box;
+    color: #000;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid rgb(0,0,0,0.2);
+}
+.btn-vaccine:hover{
+    background-color: #e4e4e4;
+}
+.btn-vaccine.active{
+    background-color: #102631;
+    color: #fff;
+}
+.btn-vaccine.active:hover{
+    background-color: #163341;
+}
+
 table{border-collapse:separate;line-height: normal;font-family: 'Montserrat',sans-serif;font-size: 12px;white-space: normal;}
 
 thead{background-color: #102631;color: #fff;}
@@ -68,7 +95,12 @@ tbody tr td.vaccine-imun{font-weight: 800;text-align: left;background-color: #d5
 tbody tr td.doses{background-color:#fed105}
 tbody tr td.notes{background-color:#74ad99}
 tbody tr td.risk{background-color:#b896c6}
-tbody tr td.align-left{text-align: center;}
+tbody tr td.align-left{text-align: left;}
+table#table1 thead tr th, table#table2 thead tr th{white-space: nowrap;}
+table#table1 thead tr th.vaccine, table#table2 thead tr th.vaccine {width: 108px;}
+table#table1 tbody tr td, table#table2 tbody tr td{white-space: normal !important;}
+table#table1 tbody tr td:nth-child(1), table#table2 tbody tr td:nth-child(1), table#table1 tbody tr td:nth-child(2), table#table2 tbody tr td:nth-child(2){width: 123px;}
+
 @media (max-width: 1200px){
     .container{position: relative;}
     .table-container{margin-left: 128px;overflow-x: scroll;box-sizing: border-box;padding-bottom: 2px;}

@@ -80,3 +80,48 @@ function loadTooltip(d){
         }
     });
 }
+var width
+function tbl(p) {
+    if (p == 1) {
+        $('#table1').show()
+        $('#table2').hide()
+        $('.tbl1').addClass('active')
+        $('.tbl2').removeClass('active')
+    } else {
+        $('#table1').hide()
+        $('#table2').show()
+        $('.tbl1').removeClass('active')
+        $('.tbl2').addClass('active')
+    }
+    width = $(window).width()
+    if (width <= 1200) {
+        $('#table1').find('.vaccine-imun').each(function(i) {
+            $('#table1 .vaccine-imun').eq(i).css('height',($('#table1 tbody tr').eq(i).height()-14)+"px")
+        })
+        $('#table2').find('.vaccine-imun').each(function(i) {
+            $('#table2 .vaccine-imun').eq(i).css('height',($('#table2 tbody tr').eq(i).height()-14)+"px")
+        })
+    }
+}
+$(document).ready(function () {
+    width = $(window).width()
+    if (width <= 1200) {
+        $('#table1').find('.vaccine-imun').each(function(i) {
+            $('#table1 .vaccine-imun').eq(i).css('height',($('#table1 tbody tr').eq(i).height()-14)+"px")
+        })
+        $('#table2').find('.vaccine-imun').each(function(i) {
+            $('#table2 .vaccine-imun').eq(i).css('height',($('#table2 tbody tr').eq(i).height()-14)+"px")
+        })
+    }
+})
+document.getElementsByTagName("BODY")[0].onresize = function() {
+    width = $(window).width()
+    if (width <= 1200) {
+        $('#table1').find('.vaccine-imun').each(function(i) {
+            $('#table1 .vaccine-imun').eq(i).css('height',($('#table1 tbody tr').eq(i).height()-14)+"px")
+        })
+        $('#table2').find('.vaccine-imun').each(function(i) {
+            $('#table2 .vaccine-imun').eq(i).css('height',($('#table2 tbody tr').eq(i).height()-14)+"px")
+        })
+    }
+}
