@@ -125,3 +125,8 @@ document.getElementsByTagName("BODY")[0].onresize = function() {
         })
     }
 }
+
+function readmore(e) {
+    $(e).toggleClass('close');
+    $('.box-inner, .more-btn').toggleClass('close');
+}

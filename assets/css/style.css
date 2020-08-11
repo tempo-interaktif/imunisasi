@@ -101,6 +101,48 @@ table#table1 thead tr th.vaccine, table#table2 thead tr th.vaccine {width: 108px
 table#table1 tbody tr td, table#table2 tbody tr td{white-space: normal !important;}
 table#table1 tbody tr td:nth-child(1), table#table2 tbody tr td:nth-child(1), table#table1 tbody tr td:nth-child(2), table#table2 tbody tr td:nth-child(2){width: 123px;}
 
+.box-inner{
+    border: 1px solid #000;
+    border-top: 5px solid #000;
+    border-bottom: 3px solid #000;
+    border-radius: 4px;
+    padding: 10px;
+    position: relative;
+}
+.box-inner.close{
+    max-height: 500px;
+    overflow: hidden;
+}
+.more-btn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #000;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.more-btn.close{
+    background-color: unset;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(255,255,255,1));
+    height: 400px;
+    padding-bottom: 10px;
+}
+.more-btn span{
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+.more-btn span::before{
+    content: "TUTUP \25B2";
+}
+.more-btn span.close::before{
+    content: "BACA SELENGKAPNYA \25BC";
+}
+
 @media (max-width: 1200px){
     .container{position: relative;}
     .table-container{margin-left: 128px;overflow-x: scroll;box-sizing: border-box;padding-bottom: 2px;}
